@@ -39,7 +39,7 @@ const swaggerDefinition = {
     version: '1.0.0',
     description: 'Endpoints to test the routes',
   },
-  host: 'localhost:3000',
+  host: process.env.HOST,
   basePath: '/',
   securityDefinitions: {
     bearerAuth: {
