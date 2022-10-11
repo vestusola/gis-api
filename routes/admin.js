@@ -59,9 +59,9 @@ router.get('/admin/places', authGuard, AdminController.places);
  *             address:
  *               type: string
  *             latitude:
- *               type: numeric
+ *               type: number
  *             longitude:
- *               type: numeric
+ *               type: number
  *         required:
  *           - place
  *           - address
