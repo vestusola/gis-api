@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   Place.init({
     name: DataTypes.STRING,
     latitude: DataTypes.DOUBLE,
-    longitude: DataTypes.DOUBLE
+    longitude: DataTypes.DOUBLE,
+    address: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Place',

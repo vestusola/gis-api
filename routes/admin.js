@@ -56,12 +56,15 @@ router.get('/admin/places', authGuard, AdminController.places);
  *           properties:
  *             place:
  *               type: string
+ *             address:
+ *               type: string
  *             latitude:
  *               type: numeric
  *             longitude:
  *               type: numeric
  *         required:
  *           - place
+ *           - address
  *           - latitutde
  *           - longitude
  *     responses:
@@ -139,12 +142,15 @@ router.get('/admin/places/edit/:id', authGuard, AdminController.editPlace);
  *           properties:
  *             place:
  *               type: string
+ *             address:
+ *               type: string
  *             longitude:
  *               type: number
  *             latitude:
  *               type: number
  *         required:
  *           - place
+ *           - address
  *           - longitude
  *           - latitude
  *     responses:

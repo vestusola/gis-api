@@ -51,7 +51,7 @@ class AdminController {
 
       if (auth == 'admin') {
         // Request data
-        const { place, latitude, longitude } = req.body;
+        const { place, address, latitude, longitude } = req.body;
 
         // Check if place has already been registered
         var isPlaceRegistered = await Place.findOne({ where: { name: place }});
@@ -60,6 +60,7 @@ class AdminController {
         // Add new place
         Place.create({
           name: place,
+          address: address,
           longitude: longitude,
           latitude: latitude
         }).then(created => {
@@ -109,7 +110,7 @@ class AdminController {
 
       if (auth == 'admin') {
         // Request data
-        const { place, latitude, longitude } = req.body;
+        const { place, address, latitude, longitude } = req.body;
         const placeId = req.params.id;
 
         // Check if place has already been registered
@@ -119,6 +120,7 @@ class AdminController {
         // Update place
         Place.update({
           name: place,
+          address: address,
           longitude: longitude,
           latitude: latitude
         }, {
